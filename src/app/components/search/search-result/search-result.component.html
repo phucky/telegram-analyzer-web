@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <p>There are {{ resultCopy && resultCopy.length || 0 }} results</p>
+    <p>The chart becomes confusing when you use several channels. </p>
+    <div class="chart-wrapper">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+    </div>
+    <div class="messages-wrapper">
+        <div *ngFor="let result of resultCopy">
+            <div class="message-body">
+                <div>TelegramId: {{ result.item.id }}</div>
+                <div>Date: {{ result.item.timestamp }}</div>
+                <div class="message" [innerHTML]="getMessage(result)"> </div>
+            </div>
+        </div>
+    </div>
+</div>

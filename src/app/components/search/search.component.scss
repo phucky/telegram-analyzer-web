@@ -1,0 +1,33 @@
+.search-wrapper {
+    margin: 20px;
+    mat-form-field.mat-form-field.input-field {
+        width: 600px;
+        margin: 25px;
+    }
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-desc {
+    width: 600px;
+}
+
+mat-checkbox {
+    margin-right: 10px;
+}
+
+section {
+    margin: 25px;
+
+    >div {
+        margin-bottom: 20px;
+    }
+
+    &.channel-selection {
+        max-width: 790px;
+    }
+}
+
